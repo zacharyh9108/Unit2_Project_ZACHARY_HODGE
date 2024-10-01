@@ -1,0 +1,43 @@
+import java.lang.Math
+
+LinearEquation class
+
+ //Instance variables
+private x1
+private x2
+private y1
+private y2
+
+ //Constructor
+public Equation(int x1, int x2, int y1, int y2)
+this x1 = x1
+this x2 = x2
+this y1 = y1
+this y2 = y2
+
+ //Methods
+public int getSlope(y2, y1, x2, x1)
+    y = y2 - y1
+    x = x2 - x1
+    slope = y / x
+    return slope
+
+public int getYIntercept()
+    yIntercept = y1 / (slope * x1)
+    return yIntercept
+
+public int distancePoint(y2, y1, x2, x1)
+    a = Math.pow((x2 - x1), 2)
+    b = Math.pow((y2 - y1), 2)
+    x = a + b
+    distance = Math.sqrt(x)
+    return distance
+
+public int thirdXValue(x3)
+    
+
+
+
+
+
+
