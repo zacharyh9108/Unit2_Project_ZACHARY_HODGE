@@ -34,7 +34,8 @@ public int distancePoint(y2, y1, x2, x1)
     return distance
 
 public int thirdXValue(x3)
-    
+    x3Value = (x3 * slope) + yIntercept
+    return x2Value
 
 
 
