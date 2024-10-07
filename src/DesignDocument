@@ -1,5 +1,5 @@
                             LinearEquation class
-import java.land.Math
+import java.lang.Math
  //Instance variables
 private x1
 private x2
