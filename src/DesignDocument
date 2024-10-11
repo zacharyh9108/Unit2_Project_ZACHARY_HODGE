@@ -14,11 +14,15 @@ this y1 = y1
 this y2 = y2
 
  //Methods
-public int getSlope(y2, y1, x2, x1)
+public int slope(y2, y1, x2, x1)
     y = y2 - y1
     x = x2 - x1
     slope = y / x
     return slope
+
+public string getSlope() {
+    conditonal makes decimal into fraction
+}
 
 public int getYIntercept()
     yIntercept = y1 / (slope * x1)
@@ -36,6 +40,7 @@ public int thirdXValue(x3)
     return x2Value
 
 
+
                             EquationRunner class
 import java.util.Scanner
 
@@ -48,9 +53,17 @@ Scanner s = new Scanner(System.in);
         System.out.print("Enter your second coordinate point: ");
         String userCoord2 = s.nextLine();
 
+        extract the numbers from the coordinates
 
-        System.out.println("First pair: " + userCoord1);
-        System.out.println("Second pair: " + userCoord2);
+        parse the string into actual integers
+
+        LinearEquation equation = new LinearEquation(x1, x2, x3, x4)
+
+        print statements
+
+        Scanner for x3
+        parse x3
+        print x3
 
 
 
