@@ -8,10 +8,11 @@ public class EquationRunner {
         String userCoord1 = s.nextLine();
 
 
-        Scanner w = new Scanner(System.in);
+        Scanner x = new Scanner(System.in);
         System.out.print("Enter your second coordinate point: ");
-        String userCoord2 = w.nextLine();
+        String userCoord2 = x.nextLine();
 
+        // Separating x and y values for each coordinate point
         String stringX1 = userCoord1.substring(userCoord1.indexOf("(") + 1, userCoord1.indexOf(","));
         String stringY1 = userCoord1.substring(userCoord1.indexOf(",") + 1, userCoord1.indexOf(")"));
         String stringX2 = userCoord2.substring(userCoord2.indexOf("(") + 1, userCoord2.indexOf(","));
@@ -24,17 +25,21 @@ public class EquationRunner {
 
         LinearEquation equation = new LinearEquation(x1, y1, x2, y2);
 
-        // Prints the coordinate pairs, slope, y-intercept, distance, and equation in slope-intercept form
+        // Coordinate pairs
         System.out.println();
         System.out.println("First pair: " + "(" + x1 + "," + y1 + ")");
         System.out.println("Second pair: " + "(" + x2 + "," + y2 + ")");
         System.out.println();
 
+        // Equation in slope-intercept form
         if (equation.getYIntercept() < 0) {
             System.out.println("Equation: " + "y = " + equation.getSlope() + "x " + equation.getYIntercept());
         }
-        else {
+        else if (equation.getYIntercept() > 0){
             System.out.println("Equation: " + "y = " + equation.getSlope() + "x" + " + " + equation.getYIntercept());
+        }
+        else {
+            System.out.println("Equation: " + "y = " + equation.getSlope() + "x");
         }
 
         System.out.println();
@@ -43,9 +48,9 @@ public class EquationRunner {
         System.out.println("Distance between points: " + equation.distancePoints());
         System.out.println();
 
-        Scanner z = new Scanner(System.in);
+        Scanner y = new Scanner(System.in);
         System.out.print("Enter third x-value: ");
-        String userX3 = z.nextLine();
+        String userX3 = y.nextLine();
         double x3 = Double.parseDouble(userX3);
 
         System.out.println("Solved third pair: " + "(" + x3 + "," + equation.thirdYValue(x3) + ")");
